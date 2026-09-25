@@ -642,9 +642,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1414932794}
-        m_TargetAssemblyTypeName: CubeSpawner, Assembly-CSharp
-        m_MethodName: RemoveCube
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: OnClickMinusButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1047,7 +1047,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: OnInputYChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1159,7 +1171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0.16470589}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1271,13 +1283,13 @@ MonoBehaviour:
   m_MinValue: -360
   m_MaxValue: 360
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1414932796}
-        m_TargetAssemblyTypeName: CubeRotator, Assembly-CSharp
-        m_MethodName: SetSpeed
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: OnSpeedSliderChanged
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1533,7 +1545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0.16470589}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1676,7 +1688,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: OnInputXChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2265,7 +2289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.3137255}
+  m_Color: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 0.18431373}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2516,12 +2540,12 @@ GameObject:
   - component: {fileID: 977040934}
   - component: {fileID: 977040933}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &977040933
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2610,7 +2634,7 @@ Transform:
   m_GameObject: {fileID: 977040932}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: -2.25, z: 0}
   m_LocalScale: {x: 11.31, y: 11.31, z: 11.31}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2805,7 +2829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0.16470589}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2913,9 +2937,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1414932794}
-        m_TargetAssemblyTypeName: CubeSpawner, Assembly-CSharp
-        m_MethodName: AddCube
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: OnClickPlusButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3183,9 +3207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1414932794}
-        m_TargetAssemblyTypeName: CubeSpawner, Assembly-CSharp
-        m_MethodName: AddCube
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: SelectAxisX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3290,8 +3314,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.8948954, g: 0.7882353, b: 1, a: 1}
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3636,7 +3660,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: OnInputZChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3844,8 +3880,9 @@ GameObject:
   - component: {fileID: 1414932795}
   - component: {fileID: 1414932794}
   - component: {fileID: 1414932796}
+  - component: {fileID: 1414932797}
   m_Layer: 0
-  m_Name: CubeSpawner
+  m_Name: CubeController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3893,11 +3930,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f244c25159c8744b73ef4895299f10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CubeRotator
-  _rotationSpeed: 100
   _pivotObject: {fileID: 1429897814}
-  _rotationAxis: 1
-  _useCustomAxis: 0
-  _customAxis: {x: 0, y: 1, z: 0}
+--- !u!114 &1414932797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414932793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea73005d4664fd440a0b6491a0478fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  _rotator: {fileID: 1414932796}
+  _spawner: {fileID: 1414932794}
 --- !u!1 &1429897813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,9 +4196,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1414932794}
-        m_TargetAssemblyTypeName: CubeSpawner, Assembly-CSharp
-        m_MethodName: AddCube
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: SelectAxisZ
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4282,8 +4329,69 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: OnCustomAxisToggleChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
+--- !u!1 &1550030791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1550030793}
+  - component: {fileID: 1550030792}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1550030792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550030791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 9186dd44ce3c41f47af9bfdbe2e48b73, type: 2}
+--- !u!4 &1550030793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550030791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7535808, y: -1.326277, z: 1.1069748}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554376792
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,9 +4550,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1414932794}
-        m_TargetAssemblyTypeName: CubeSpawner, Assembly-CSharp
-        m_MethodName: AddCube
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: SelectAxisY
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5219,9 +5327,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1414932794}
-        m_TargetAssemblyTypeName: CubeSpawner, Assembly-CSharp
-        m_MethodName: SetRadius
+      - m_Target: {fileID: 1414932797}
+        m_TargetAssemblyTypeName: CubeControllerUI, Assembly-CSharp
+        m_MethodName: OnRadiusSliderChanged
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5389,7 +5497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.3137255}
+  m_Color: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 0.18431373}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5577,8 +5685,8 @@ Camera:
   m_GameObject: {fileID: 2111728019}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.06666667, g: 0.078431375, b: 0.11764707, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5628,7 +5736,7 @@ Transform:
   m_GameObject: {fileID: 2111728019}
   serializedVersion: 2
   m_LocalRotation: {x: 0.388159, y: 0, z: 0, w: 0.9215924}
-  m_LocalPosition: {x: 0, y: 7.24, z: -9.55}
+  m_LocalPosition: {x: -2.38, y: 8.25, z: -9.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5657,7 +5765,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -5689,3 +5797,4 @@ SceneRoots:
   - {fileID: 977040936}
   - {fileID: 1715041630}
   - {fileID: 466578927}
+  - {fileID: 1550030793}

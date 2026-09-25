@@ -55,10 +55,10 @@ public class CubeSpawner : MonoBehaviour
 
     public void SetRadius(float radius)
     {
-        _radius = radius;
-        AdjuctAllCubesOffset();
-        /*foreach (var (cube, trail) in _cubesTrailsDict)
-            cube.transform.position = cube.transform.position.normalized *  _radius;*/
+        _radius = radius; 
+        //AdjuctAllCubesOffset();
+        foreach (var (cube, trail) in _cubesTrailsDict)
+            cube.transform.position = cube.transform.position.normalized *  _radius;
     }
     
     // ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== 

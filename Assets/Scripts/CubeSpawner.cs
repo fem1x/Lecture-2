@@ -13,7 +13,7 @@ public class CubeSpawner : MonoBehaviour
     private Dictionary<GameObject, TrailRenderer> _cubesTrailsDict = new();
     // ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== 
     
-    void Awake() => SpawnStartingCubes();
+    private void Awake() => SpawnStartingCubes();
 
     private void SpawnStartingCubes()
     {
